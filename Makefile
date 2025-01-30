@@ -1,3 +1,5 @@
+include Makefile.wanip
+
 MAKEFLAGS += --no-print-directory
 
 gamepath = /mnt/c/Users/eivind/MYHOME/Applications/SPT_3_10
@@ -22,6 +24,11 @@ forceinstall:
 config_fika:
 	sed -i "s/sharedQuestProgression\"\: false/sharedQuestProgression\"\: true/" ${gamepath}/${tspath}/fika-server/assets/configs/fika.jsonc 
 	sed -i "s/giftedItemsLoseFIR\"\: true/giftedItemsLoseFIR\"\: false/" ${gamepath}/${tspath}/fika-server/assets/configs/fika.jsonc 
+config_fika_server:
+	sed -i "s/ip\"\: \"[0-9]\+.[0-9]\+.[0-9]\+.[0-9]\+/ip\"\: \"0.0.0.0/" ${gamepath}/SPT_Data/Server/configs/http.json
+	sed -i "s/backendIp\"\: \"[0-9]\+.[0-9]\+.[0-9]\+.[0-9]\+/backendIp\"\: \"${hostwanip}/" ${gamepath}/SPT_Data/Server/configs/http.json
+
+
 clean:
 	rm -rf downloads
 
