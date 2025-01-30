@@ -1,0 +1,41 @@
+MAKEFLAGS += --no-print-directory
+
+gamepath = /mnt/c/Users/eivind/MYHOME/Applications/SPT_3_10
+pluginpath = BepInEx/plugins
+tspath = user/mods
+
+install:
+	if [ ! -f omit.txt ]; then make forceinstall; fi
+
+forceinstall:
+	make clean
+	make download
+	for file in $(shell ls downloads/*.zip) ; do \
+		unzip $${file} -d ${gamepath}/ ; \
+	done
+	for file in $(shell ls downloads/*.7z) ; do \
+		7za x $${file} -o${gamepath}/ ; \
+	done
+	make config_fika
+	make clean
+
+config_fika:
+	sed -i "s/sharedQuestProgression\"\: false/sharedQuestProgression\"\: true/" ${gamepath}/${tspath}/fika-server/assets/configs/fika.jsonc 
+	sed -i "s/giftedItemsLoseFIR\"\: true/giftedItemsLoseFIR\"\: false/" ${gamepath}/${tspath}/fika-server/assets/configs/fika.jsonc 
+clean:
+	rm -rf downloads
+
+download:
+	mkdir -p downloads
+	wget -P downloads/ https://github.com/dwesterwick/SPTQuestingBots/releases/download/0.9.0/DanW-SPTQuestingBots.zip
+	wget -P downloads/ https://github.com/tyfon7/UIFixes/releases/download/v3.1.2/Tyfon-UIFixes-3.1.2.zip
+	wget -P downloads/ https://github.com/schkuromi/flea-fir-only/releases/download/1.0.2/schkuromi-fleafironly.zip
+	wget -P downloads/ https://github.com/project-fika/Fika-Plugin/releases/download/v1.1.5.0/Fika.Release.1.1.5.0.zip
+	wget -P downloads/ https://github.com/project-fika/Fika-Server/releases/download/v2.3.6/fika-server.zip
+	wget -P downloads/ https://github.com/Solarint/SAIN/releases/download/v3.2.1-Release/SAIN-3.2.1-Release.7z
+	wget -P downloads/ https://github.com/DrakiaXYZ/SPT-Waypoints/releases/download/1.6.2/DrakiaXYZ-Waypoints-1.6.2.7z
+	wget -P downloads/ https://github.com/DrakiaXYZ/SPT-BigBrain/releases/download/1.2.0/DrakiaXYZ-BigBrain-1.2.0.7z
+	wget -P downloads/ https://github.com/peinwastaken/SPTLeftStanceWallFix/releases/download/1.0.0/LeftStanceWallFix.zip
+	wget -P downloads/ https://github.com/No3371/SPT_ThatsLit/releases/download/1.3100.3/ThatsLit_1.3100.3.zip
+	wget -P downloads/ https://github.com/ehaugw/SPT-MeaningfulWeaponMasteries/raw/refs/heads/master/MeaningfulWeaponMasteries.zip
+	wget -P downloads/ https://github.com/ehaugw/SPT-BetterZeroing/raw/refs/heads/master/BetterZeroing.zip
