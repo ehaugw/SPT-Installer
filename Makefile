@@ -46,3 +46,4 @@ download:
 	wget -P downloads/ https://github.com/No3371/SPT_ThatsLit/releases/download/1.3100.3/ThatsLit_1.3100.3.zip
 	wget -P downloads/ https://github.com/ehaugw/SPT-MeaningfulWeaponMasteries/raw/refs/heads/master/MeaningfulWeaponMasteries.zip
 	wget -P downloads/ https://github.com/ehaugw/SPT-BetterZeroing/raw/refs/heads/master/BetterZeroing.zip
+	wget -P downloads/ https://github.com/ehaugw/SPT-ThatsLitSyncMirror/raw/refs/heads/master/ThatsLitSync_1.3100.3.zip
