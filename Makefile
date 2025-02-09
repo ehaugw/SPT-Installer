@@ -6,6 +6,9 @@ gamepath = /mnt/c/Users/eivind/MYHOME/Applications/SPT_3_10
 pluginpath = BepInEx/plugins
 tspath = user/mods
 
+dependencies:
+	sudo apt install p7zip-full
+
 install:
 	if [ ! -f omit.txt ]; then make forceinstall; fi
 
@@ -52,9 +55,9 @@ download:
 	wget -P downloads/ https://github.com/DrakiaXYZ/SPT-Waypoints/releases/download/1.6.2/DrakiaXYZ-Waypoints-1.6.2.7z
 	wget -P downloads/ https://github.com/DrakiaXYZ/SPT-BigBrain/releases/download/1.2.0/DrakiaXYZ-BigBrain-1.2.0.7z
 	wget -P downloads/ https://github.com/peinwastaken/SPTLeftStanceWallFix/releases/download/1.0.0/LeftStanceWallFix.zip
-	wget -P downloads/ https://github.com/No3371/SPT_ThatsLit/releases/download/1.3100.3/ThatsLit_1.3100.3.zip
+	# wget -P downloads/ https://github.com/No3371/SPT_ThatsLit/releases/download/1.3100.3/ThatsLit_1.3100.3.zip
 	wget -P downloads/ https://github.com/ehaugw/SPT-MeaningfulWeaponMasteries/raw/refs/heads/master/MeaningfulWeaponMasteries.zip
 	wget -P downloads/ https://github.com/ehaugw/SPT-BetterZeroing/raw/refs/heads/master/BetterZeroing.zip
-	wget -P downloads/ https://github.com/ehaugw/SPT-ThatsLitSyncMirror/raw/refs/heads/master/ThatsLitSync_1.3100.3.zip
+	# wget -P downloads/ https://github.com/ehaugw/SPT-ThatsLitSyncMirror/raw/refs/heads/master/ThatsLitSync_1.3100.3.zip
 	wget -P downloads/ https://github.com/ehaugw/SPT-NonUglyCPC/raw/refs/heads/master/non-ugly-cpc.zip
 	wget -P downloads/ https://raw.githubusercontent.com/SleepingPills/HollywoodFX-Release/refs/heads/main/HollywoodFX_Alpha6.zip
