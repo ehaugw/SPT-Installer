@@ -57,3 +57,4 @@ download:
 	wget -P downloads/ https://github.com/ehaugw/SPT-BetterZeroing/raw/refs/heads/master/BetterZeroing.zip
 	wget -P downloads/ https://github.com/ehaugw/SPT-ThatsLitSyncMirror/raw/refs/heads/master/ThatsLitSync_1.3100.3.zip
 	wget -P downloads/ https://github.com/ehaugw/SPT-NonUglyCPC/raw/refs/heads/master/non-ugly-cpc.zip
+	wget -P downloads/ https://raw.githubusercontent.com/SleepingPills/HollywoodFX-Release/refs/heads/main/HollywoodFX_Alpha6.zip
