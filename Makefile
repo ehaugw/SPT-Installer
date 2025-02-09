@@ -9,17 +9,7 @@ tspath = user/mods
 install:
 	if [ ! -f omit.txt ]; then make forceinstall; fi
 
-forceinstall:
-	make clean
-	make download
-	for file in $(shell ls downloads/*.zip) ; do \
-		unzip $${file} -d ${gamepath}/ ; \
-	done
-	for file in $(shell ls downloads/*.7z) ; do \
-		7za x $${file} -o${gamepath}/ ; \
-	done
-	make config_fika
-	make clean
+forceinstall: clean download extract config_fika clean
 
 config_fika:
 	sed -i "s/sharedQuestProgression\"\: false/sharedQuestProgression\"\: true/" ${gamepath}/${tspath}/fika-server/assets/configs/fika.jsonc 
@@ -28,6 +18,13 @@ config_fika_server:
 	sed -i "s/ip\"\: \"[0-9]\+.[0-9]\+.[0-9]\+.[0-9]\+/ip\"\: \"0.0.0.0/" ${gamepath}/SPT_Data/Server/configs/http.json
 	sed -i "s/backendIp\"\: \"[0-9]\+.[0-9]\+.[0-9]\+.[0-9]\+/backendIp\"\: \"${hostwanip}/" ${gamepath}/SPT_Data/Server/configs/http.json
 
+extract:
+	for file in $(shell ls downloads/*.zip) ; do \
+		unzip $${file} -d ${gamepath}/ ; \
+	done
+	for file in $(shell ls downloads/*.7z) ; do \
+		7za x $${file} -o${gamepath}/ ; \
+	done
 
 clean:
 	rm -rf downloads
