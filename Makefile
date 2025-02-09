@@ -26,6 +26,18 @@ extract:
 		7za x $${file} -o${gamepath}/ ; \
 	done
 
+uninstall:
+	rm -rf ${gamepath}/${tspath}
+	mkdir -p ${gamepath}/${tspath}
+	(cd ${gamepath} && find ${pluginpath}/* ! -name 'spt' -type d -exec rm -rf {} +)
+	(cd ${gamepath} && find ${pluginpath}/* -maxdepth 0 ! -name 'spt' -type f -exec rm -rf {} +)
+	rm -f ${gamepath}/Fika\ License.txt
+	rm -f ${gamepath}/LiteNetLib\ License.txt
+	rm -f ${gamepath}/Open.NAT\ License.txt
+	rm -f ${gamepath}/SIT\ License.txt
+	rm -f ${gamepath}/Readme.md
+	rm -f ${gamepath}/BepInEx/config/com.janky.hollywoodfx.cfg
+
 clean:
 	rm -rf downloads
 
