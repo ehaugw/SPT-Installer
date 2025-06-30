@@ -7,3 +7,4 @@ server_files/SPT.Server.exe
 server_files/user
 server_files/mod_download/download_unzip_install_mods.log
 server_files/mod_download/mod_urls_downloaded.txt
+omit.txt
