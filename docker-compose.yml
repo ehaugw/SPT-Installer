@@ -1,0 +1,14 @@
+services:
+  fika-server:
+    image: ghcr.io/zhliau/fika-spt-server-docker:3.11.3
+    environment:
+      - INSTALL_FIKA=false
+      # This will automatically set SPT server's configs to work in a containerized environment
+      - UID=1006
+      - GID=1006
+      - INSTALL_OTHER_MODS=true
+    ports:
+      - 6969:6969
+    volumes:
+      # Set this to an empty directory, or a directory containing your existing SPT server files
+      - ./server_files:/opt/server
