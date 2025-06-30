@@ -18,6 +18,7 @@ config: config_fika config_thatslit
 config_fika:
 	sed -i "s/sharedQuestProgression\"\: false/sharedQuestProgression\"\: true/" ${gamepath}/${tspath}/fika-server/assets/configs/fika.jsonc 
 	sed -i "s/sentItemsLoseFIR\"\: true/sentItemsLoseFIR\"\: false/" ${gamepath}/${tspath}/fika-server/assets/configs/fika.jsonc 
+	sed -i "s/showNonStandardProfile\"\: false/showNonStandardProfile\"\: true/" ${gamepath}/${tspath}/fika-server/assets/configs/fika.jsonc
 config_fika_server:
 	sed -i "s/ip\"\: \"[0-9]\+.[0-9]\+.[0-9]\+.[0-9]\+/ip\"\: \"0.0.0.0/" ${gamepath}/SPT_Data/Server/configs/http.json
 	sed -i "s/backendIp\"\: \"[0-9]\+.[0-9]\+.[0-9]\+.[0-9]\+/backendIp\"\: \"${hostwanip}/" ${gamepath}/SPT_Data/Server/configs/http.json
