@@ -1,0 +1,6 @@
+https://github.com/project-fika/Fika-Server/releases/download/v2.4.8/fika-server-2.4.8.zip
+https://github.com/ehaugw/SPT-ExtendedZeroRanges/raw/refs/heads/master/extended-zero-ranges.zip
+https://github.com/ehaugw/SPT-EhaugwWeaponBalancing/raw/refs/heads/master/ehaugw-weapon-balancing.zip
+https://github.com/tyfon7/UIFixes/releases/download/v4.2.1/Tyfon-UIFixes-4.2.1.zip
+https://github.com/dwesterwick/SPTQuestingBots/releases/download/0.10.0/DanW-SPTQuestingBots.zip
+https://github.com/Lacyway/SAIN/releases/download/v3.3.1/SAIN-3.3.1-Release.zip
