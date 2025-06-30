@@ -9,7 +9,7 @@ dependencies:
 	sudo apt install p7zip-full
 
 install:
-	if [ ! -f omit.txt ]; then make forceinstall; fi
+	if [ ! -f omit.txt ] && [ -f ${gamepath}/user/launcher/config.json ]; then make forceinstall; fi
 
 forceinstall: clean download extract clean
 
