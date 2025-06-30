@@ -13,6 +13,9 @@ install:
 
 forceinstall: clean download extract clean
 
+config:
+	if [ -f ${gamepath}/user/launcher/config.json ]; then make config_client; else make config_server; fi
+
 config_client: config_fika_client config_fika_common config_thatslit 
 
 config_server: config_fika_server config_fika_common
