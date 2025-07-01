@@ -21,8 +21,18 @@ config_client: config_fika_client config_fika_common config_thatslit
 config_server: config_fika_server config_fika_common
 
 config_fika_client:
-	sed -i "s/Url\"\: \"https\:\/\/[0-9]\+.[0-9]\+.[0-9]\+.[0-9]\+:[0-9]\+/Url\"\: \"https\:\/\/${hostwanip}\:6969/" ${gamepath}/user/launcher/config.json
-	sed -i "s/IsDevMode\"\: false/IsDevMode\"\: true/" ${gamepath}/user/launcher/config.json
+	sed -i "s/Url\"\: \"https\:\/\/[0-9]\+.[0-9]\+.[0-9]\+.[0-9]\+:[0-9]\+/Url\"\: \"https\:\/\/${hostwanip}\:6969/"	${gamepath}/user/launcher/config.json
+	sed -i "s/IsDevMode\"\: false/IsDevMode\"\: true/"																	${gamepath}/user/launcher/config.json
+	sed -i "s/Show Player Name Plates = true/Show Player Name Plates = false/"											${gamepath}/BepInEx/config/com.fika.core.cfg
+	sed -i "s/Hide Health Bar = false/Hide Health Bar = true/"															${gamepath}/BepInEx/config/com.fika.core.cfg
+	sed -i "s/Show Effects = true/Show Effects = false/"																${gamepath}/BepInEx/config/com.fika.core.cfg
+	sed -i "s/Show Player Faction Icon = true/Show Player Faction Icon = false/"										${gamepath}/BepInEx/config/com.fika.core.cfg
+	sed -i "s/Name Plates Use Optic Zoom = true/Name Plates Use Optic Zoom = false/"									${gamepath}/BepInEx/config/com.fika.core.cfg
+	sed -i "s/Easy Kill Conditions = true/Easy Kill Conditions = false/"												${gamepath}/BepInEx/config/com.fika.core.cfg
+	sed -i "s/Shared Kill Experience = false/Shared Kill Experience = true/"											${gamepath}/BepInEx/config/com.fika.core.cfg
+	sed -i "s/Shared Boss Experience = false/Shared Boss Experience = true/"											${gamepath}/BepInEx/config/com.fika.core.cfg
+	sed -i "s/SelectedDefaultPreset\"\: \"[a-zA-Z]\+\"/SelectedDefaultPreset\"\: \"deathwish\"/"						${gamepath}/BepInEx/plugins/SAIN/Presets/ConfigSettings.json
+	sed -i "s/Open Editor Shortcut = [a-zA-Z]\+/Open Editor Shortcut = /"												${gamepath}/BepInEx/config/me.sol.sain.cfg
 
 config_fika_common:
 	sed -i "s/sharedQuestProgression\"\: false/sharedQuestProgression\"\: true/" ${gamepath}/${tspath}/fika-server/assets/configs/fika.jsonc 
