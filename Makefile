@@ -57,10 +57,10 @@ config_thatslit:
 
 extract:
 	for file in $(shell ls downloads/*.zip) ; do \
-		unzip $${file} -d ${gamepath}/ ; \
+		unzip -o $${file} -d ${gamepath}/ ; \
 	done
 	for file in $(shell ls downloads/*.7z) ; do \
-		7za x $${file} -o${gamepath}/ ; \
+		7za x -y $${file} -o${gamepath}/ ; \
 	done
 
 uninstall:
