@@ -44,13 +44,13 @@ config_fika_server:
 	sed -i "s/backendIp\"\: \"[0-9]\+.[0-9]\+.[0-9]\+.[0-9]\+/backendIp\"\: \"${hostwanip}/" 							${gamepath}/SPT_Data/Server/configs/http.json
 
 config_thatslit:
-	sed -i "s/Lighting Info = true/Lighting Info = false/"      ${gamepath}/BepInEx/config/bastudio.thatslit.cfg
-	sed -i "s/Weather Info = true/Weather Info = false/"        ${gamepath}/BepInEx/config/bastudio.thatslit.cfg
-	sed -i "s/Equipment Info = true/Equipment Info = false/"    ${gamepath}/BepInEx/config/bastudio.thatslit.cfg
-	sed -i "s/Foliage Info = true/Foliage Info = false/"        ${gamepath}/BepInEx/config/bastudio.thatslit.cfg
-	sed -i "s/Terrain Info = true/Terrain Info = false/"        ${gamepath}/BepInEx/config/bastudio.thatslit.cfg
-	sed -i "s/Resolution Level = [0-9]/Resolution Level = 3/"   ${gamepath}/BepInEx/config/bastudio.thatslit.cfg
-	sed -i "s/Foliage Samples = [0-9]/Foliage Samples = 3/"     ${gamepath}/BepInEx/config/bastudio.thatslit.cfg
+	sed -i "s/Lighting Info = true/Lighting Info = false/"      														${gamepath}/BepInEx/config/bastudio.thatslit.cfg
+	sed -i "s/Weather Info = true/Weather Info = false/"        														${gamepath}/BepInEx/config/bastudio.thatslit.cfg
+	sed -i "s/Equipment Info = true/Equipment Info = false/"    														${gamepath}/BepInEx/config/bastudio.thatslit.cfg
+	sed -i "s/Foliage Info = true/Foliage Info = false/"        														${gamepath}/BepInEx/config/bastudio.thatslit.cfg
+	sed -i "s/Terrain Info = true/Terrain Info = false/"        														${gamepath}/BepInEx/config/bastudio.thatslit.cfg
+	sed -i "s/Resolution Level = [0-9]/Resolution Level = 3/"   														${gamepath}/BepInEx/config/bastudio.thatslit.cfg
+	sed -i "s/Foliage Samples = [0-9]/Foliage Samples = 3/"     														${gamepath}/BepInEx/config/bastudio.thatslit.cfg
 	sed -i "s/54cb50c76803fa8b248b4571\"\: [0-9]\+/54cb50c76803fa8b248b4571\"\: 0/"										${gamepath}/SPT_Data/Server/configs/insurance.json
 	sed -i "s/54cb57776803fa99248b456e\"\: [0-9]\+/54cb57776803fa99248b456e\"\: 0/"										${gamepath}/SPT_Data/Server/configs/insurance.json
 	sed -i "s/maxSellChancePercent\"\: [0-9]\+/maxSellChancePercent\"\: 0/"												${gamepath}/SPT_Data/Server/configs/ragfair.json
