@@ -92,6 +92,7 @@ download:
 	wget -P downloads/ https://github.com/Visasid/ThatsLit/releases/download/v3.4rc1/ThatsLit.zip
 	wget -P downloads/ https://github.com/ehaugw/SPT-MeaningfulWeaponMasteries/raw/refs/heads/master/MeaningfulWeaponMasteries.zip
 	wget -P downloads/ https://github.com/ehaugw/SPT-BetterZeroing/raw/refs/heads/master/BetterZeroing.zip
+	wget -P downloads/ https://github.com/ehaugw/SPT-AleLite/raw/refs/heads/master/AleLite.zip
 	# wget -P downloads/ https://github.com/ehaugw/SPT-ThatsLitSyncMirror/raw/refs/heads/master/ThatsLitSync_1.3100.3.zip
 	# wget -P downloads/ https://github.com/ehaugw/SPT-NonUglyCPC/raw/refs/heads/master/non-ugly-cpc.zip
 	wget -P downloads/ https://github.com/SleepingPills/HollywoodFX/releases/download/v1.6.7/HollywoodFX_1.6.7.zip
