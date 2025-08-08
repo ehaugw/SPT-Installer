@@ -18,7 +18,16 @@ config:
 
 config_client: config_fika_client config_fika_common config_thatslit 
 
-config_server: config_fika_server config_fika_common
+config_server:
+	sed -i "s/sharedQuestProgression\"\: false/sharedQuestProgression\"\: true/"										${gamepath}/${tspath}/fika-server/assets/configs/fika.jsonc 
+	sed -i "s/sentItemsLoseFIR\"\: true/sentItemsLoseFIR\"\: false/"													${gamepath}/${tspath}/fika-server/assets/configs/fika.jsonc 
+	sed -i "s/showNonStandardProfile\"\: false/showNonStandardProfile\"\: true/" 										${gamepath}/${tspath}/fika-server/assets/configs/fika.jsonc
+	sed -i "s/ip\"\: \"[0-9]\+.[0-9]\+.[0-9]\+.[0-9]\+/ip\"\: \"0.0.0.0/" 												${gamepath}/SPT_Data/Server/configs/http.json
+	sed -i "s/backendIp\"\: \"[0-9]\+.[0-9]\+.[0-9]\+.[0-9]\+/backendIp\"\: \"${hostwanip}/" 							${gamepath}/SPT_Data/Server/configs/http.json
+	sed -i "s/54cb50c76803fa8b248b4571\"\: [0-9]\+/54cb50c76803fa8b248b4571\"\: 0/"										${gamepath}/SPT_Data/Server/configs/insurance.json
+	sed -i "s/54cb57776803fa99248b456e\"\: [0-9]\+/54cb57776803fa99248b456e\"\: 0/"										${gamepath}/SPT_Data/Server/configs/insurance.json
+	sed -i "s/maxSellChancePercent\"\: [0-9]\+/maxSellChancePercent\"\: 0/"												${gamepath}/SPT_Data/Server/configs/ragfair.json
+
 
 config_fika_client:
 	sed -i "s/Url\"\: \"https\:\/\/[0-9]\+.[0-9]\+.[0-9]\+.[0-9]\+:[0-9]\+/Url\"\: \"https\:\/\/${hostwanip}\:6969/"	${gamepath}/user/launcher/config.json
@@ -33,18 +42,6 @@ config_fika_client:
 	sed -i "s/Shared Boss Experience = false/Shared Boss Experience = true/"											${gamepath}/BepInEx/config/com.fika.core.cfg
 	sed -i "s/SelectedDefaultPreset\"\: \"[a-zA-Z]\+\"/SelectedDefaultPreset\"\: \"deathwish\"/"						${gamepath}/BepInEx/plugins/SAIN/Presets/ConfigSettings.json
 	sed -i "s/Open Editor Shortcut = [a-zA-Z]\+/Open Editor Shortcut = /"												${gamepath}/BepInEx/config/me.sol.sain.cfg
-
-config_fika_common:
-	sed -i "s/sharedQuestProgression\"\: false/sharedQuestProgression\"\: true/"										${gamepath}/${tspath}/fika-server/assets/configs/fika.jsonc 
-	sed -i "s/sentItemsLoseFIR\"\: true/sentItemsLoseFIR\"\: false/"													${gamepath}/${tspath}/fika-server/assets/configs/fika.jsonc 
-	sed -i "s/showNonStandardProfile\"\: false/showNonStandardProfile\"\: true/" 										${gamepath}/${tspath}/fika-server/assets/configs/fika.jsonc
-
-config_fika_server:
-	sed -i "s/ip\"\: \"[0-9]\+.[0-9]\+.[0-9]\+.[0-9]\+/ip\"\: \"0.0.0.0/" 												${gamepath}/SPT_Data/Server/configs/http.json
-	sed -i "s/backendIp\"\: \"[0-9]\+.[0-9]\+.[0-9]\+.[0-9]\+/backendIp\"\: \"${hostwanip}/" 							${gamepath}/SPT_Data/Server/configs/http.json
-	sed -i "s/54cb50c76803fa8b248b4571\"\: [0-9]\+/54cb50c76803fa8b248b4571\"\: 0/"										${gamepath}/SPT_Data/Server/configs/insurance.json
-	sed -i "s/54cb57776803fa99248b456e\"\: [0-9]\+/54cb57776803fa99248b456e\"\: 0/"										${gamepath}/SPT_Data/Server/configs/insurance.json
-	sed -i "s/maxSellChancePercent\"\: [0-9]\+/maxSellChancePercent\"\: 0/"												${gamepath}/SPT_Data/Server/configs/ragfair.json
 
 config_thatslit:
 	sed -i "s/Lighting Info = true/Lighting Info = false/"      														${gamepath}/BepInEx/config/bastudio.thatslit.cfg
