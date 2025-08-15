@@ -1,6 +1,7 @@
 services:
   fika-server:
     image: ghcr.io/zhliau/fika-spt-server-docker:3.11.3
+    restart: on-failure
     environment:
       - INSTALL_FIKA=false
       # This will automatically set SPT server's configs to work in a containerized environment
