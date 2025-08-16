@@ -5,6 +5,7 @@ server_files/Readme.md
 server_files/SPT_Data
 server_files/SPT.Server.exe
 server_files/user
+server_files/backups
 server_files/mod_download/download_unzip_install_mods.log
 server_files/mod_download/mod_urls_downloaded.txt
 omit.txt
