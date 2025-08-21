@@ -16,7 +16,7 @@ forceinstall: clean download extract clean
 config:
 	if [ -f ${gamepath}/user/launcher/config.json ]; then make config_client; else make config_server; fi
 
-config_client: config_fika_client config_fika_common config_thatslit 
+config_client: config_fika_client config_thatslit
 
 config_server:
 	sed -i "s/sharedQuestProgression\"\: false/sharedQuestProgression\"\: true/"										${gamepath}/${tspath}/fika-server/assets/configs/fika.jsonc 
