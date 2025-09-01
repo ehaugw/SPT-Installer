@@ -88,7 +88,7 @@ download:
 	wget -P downloads/ https://github.com/DrakiaXYZ/SPT-Waypoints/releases/download/1.7.1/DrakiaXYZ-Waypoints-1.7.1.7z
 	wget -P downloads/ https://github.com/DrakiaXYZ/SPT-BigBrain/releases/download/1.3.2/DrakiaXYZ-BigBrain-1.3.2.7z
 	wget -P downloads/ https://github.com/peinwastaken/SPTLeftStanceWallFix/releases/download/1.0.1/LeftStanceWallFix.zip
-	wget -P downloads/ https://github.com/Visasid/ThatsLit/releases/download/v3.4rc1/ThatsLit.zip
+	wget -P downloads/ https://github.com/T-Rumibul/SPT_ThatsLit/releases/download/v1.4000.1/v1.4000.1.zip
 	wget -P downloads/ https://github.com/ehaugw/SPT-MeaningfulWeaponMasteries/raw/refs/heads/master/MeaningfulWeaponMasteries.zip
 	wget -P downloads/ https://github.com/ehaugw/SPT-BetterZeroing/raw/refs/heads/master/BetterZeroing.zip
 	wget -P downloads/ https://github.com/ehaugw/SPT-AleLite/raw/refs/heads/master/AleLite.zip
