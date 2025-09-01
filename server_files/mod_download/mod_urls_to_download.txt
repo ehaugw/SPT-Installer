@@ -4,3 +4,4 @@ https://github.com/ehaugw/SPT-EhaugwWeaponBalancing/raw/refs/heads/master/ehaugw
 https://github.com/tyfon7/UIFixes/releases/download/v4.2.1/Tyfon-UIFixes-4.2.1.zip
 https://github.com/dwesterwick/SPTQuestingBots/releases/download/0.10.0/DanW-SPTQuestingBots.zip
 https://github.com/Lacyway/SAIN/releases/download/v3.3.1/SAIN-3.3.1-Release.zip
+https://github.com/tyfon7/hip/releases/download/v1.1.0/Tyfon-HideoutInProgress-1.1.0.zip
