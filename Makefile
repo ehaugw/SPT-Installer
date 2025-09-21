@@ -42,8 +42,10 @@ config_fika_client:
 	sed -i "s/Easy Kill Conditions = true/Easy Kill Conditions = false/"												${gamepath}/BepInEx/config/com.fika.core.cfg
 	sed -i "s/Shared Kill Experience = false/Shared Kill Experience = true/"											${gamepath}/BepInEx/config/com.fika.core.cfg
 	sed -i "s/Shared Boss Experience = false/Shared Boss Experience = true/"											${gamepath}/BepInEx/config/com.fika.core.cfg
-	sed -i "s/SelectedDefaultPreset\"\: \"[a-zA-Z]\+\"/SelectedDefaultPreset\"\: \"deathwish\"/"						${gamepath}/BepInEx/plugins/SAIN/Presets/ConfigSettings.json
-	sed -i "s/Open Editor Shortcut = [a-zA-Z]\+/Open Editor Shortcut = /"												${gamepath}/BepInEx/config/me.sol.sain.cfg
+	sed -i "s/SelectedDefaultPreset\"\: \"[a-zA-Z]\+\"/SelectedDefaultPreset\"\: \"none\"/"								${gamepath}/BepInEx/plugins/SAIN/Presets/ConfigSettings.json
+	sed -i "s/SelectedCustomPreset\"\: .*\"/SelectedCustomPreset\"\: \"deathwish_warberg\"/"							${gamepath}/BepInEx/plugins/SAIN/Presets/ConfigSettings.json
+	sed -i "s/Open Editor Shortcut = [a-zA-Z0-9]\+/Open Editor Shortcut = /"											${gamepath}/BepInEx/config/me.sol.sain.cfg
+	cp -r sain/deathwish_warberg																						${gamepath}/BepInEx/plugins/SAIN/Presets/deathwish_warberg
 
 config_thatslit:
 	echo "skipping that's lit until update"
