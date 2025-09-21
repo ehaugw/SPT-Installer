@@ -46,13 +46,14 @@ config_fika_client:
 	sed -i "s/Open Editor Shortcut = [a-zA-Z]\+/Open Editor Shortcut = /"												${gamepath}/BepInEx/config/me.sol.sain.cfg
 
 config_thatslit:
-	sed -i "s/Lighting Info = true/Lighting Info = false/"      														${gamepath}/BepInEx/config/bastudio.thatslit.cfg
-	sed -i "s/Weather Info = true/Weather Info = false/"        														${gamepath}/BepInEx/config/bastudio.thatslit.cfg
-	sed -i "s/Equipment Info = true/Equipment Info = false/"    														${gamepath}/BepInEx/config/bastudio.thatslit.cfg
-	sed -i "s/Foliage Info = true/Foliage Info = false/"        														${gamepath}/BepInEx/config/bastudio.thatslit.cfg
-	sed -i "s/Terrain Info = true/Terrain Info = false/"        														${gamepath}/BepInEx/config/bastudio.thatslit.cfg
-	sed -i "s/Resolution Level = [0-9]/Resolution Level = 3/"   														${gamepath}/BepInEx/config/bastudio.thatslit.cfg
-	sed -i "s/Foliage Samples = [0-9]/Foliage Samples = 3/"     														${gamepath}/BepInEx/config/bastudio.thatslit.cfg
+	echo "skipping that's lit until update"
+	# sed -i "s/Lighting Info = true/Lighting Info = false/"      														${gamepath}/BepInEx/config/bastudio.thatslit.cfg
+	# sed -i "s/Weather Info = true/Weather Info = false/"        														${gamepath}/BepInEx/config/bastudio.thatslit.cfg
+	# sed -i "s/Equipment Info = true/Equipment Info = false/"    														${gamepath}/BepInEx/config/bastudio.thatslit.cfg
+	# sed -i "s/Foliage Info = true/Foliage Info = false/"        														${gamepath}/BepInEx/config/bastudio.thatslit.cfg
+	# sed -i "s/Terrain Info = true/Terrain Info = false/"        														${gamepath}/BepInEx/config/bastudio.thatslit.cfg
+	# sed -i "s/Resolution Level = [0-9]/Resolution Level = 3/"   														${gamepath}/BepInEx/config/bastudio.thatslit.cfg
+	# sed -i "s/Foliage Samples = [0-9]/Foliage Samples = 3/"     														${gamepath}/BepInEx/config/bastudio.thatslit.cfg
 
 extract:
 	for file in $(shell ls downloads/*.zip) ; do \
@@ -88,7 +89,7 @@ download:
 	wget -P downloads/ https://github.com/DrakiaXYZ/SPT-Waypoints/releases/download/1.7.1/DrakiaXYZ-Waypoints-1.7.1.7z
 	wget -P downloads/ https://github.com/DrakiaXYZ/SPT-BigBrain/releases/download/1.3.2/DrakiaXYZ-BigBrain-1.3.2.7z
 	wget -P downloads/ https://github.com/peinwastaken/SPTLeftStanceWallFix/releases/download/1.0.1/LeftStanceWallFix.zip
-	wget -P downloads/ https://github.com/T-Rumibul/SPT_ThatsLit/releases/download/v1.4000.1/v1.4000.1.zip
+	# wget -P downloads/ https://github.com/T-Rumibul/SPT_ThatsLit/releases/download/v1.4000.1/v1.4000.1.zip
 	wget -P downloads/ https://github.com/ehaugw/SPT-MeaningfulWeaponMasteries/raw/refs/heads/master/MeaningfulWeaponMasteries.zip
 	wget -P downloads/ https://github.com/ehaugw/SPT-BetterZeroing/raw/refs/heads/master/BetterZeroing.zip
 	wget -P downloads/ https://github.com/ehaugw/SPT-AleLite/raw/refs/heads/master/AleLite.zip
