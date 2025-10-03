@@ -93,6 +93,7 @@ download:
 	wget -P downloads/ https://github.com/peinwastaken/SPTLeftStanceWallFix/releases/download/1.0.1/LeftStanceWallFix.zip
 	# wget -P downloads/ https://github.com/T-Rumibul/SPT_ThatsLit/releases/download/v1.4000.1/v1.4000.1.zip
 	wget -P downloads/ https://github.com/ehaugw/SPT-MeaningfulWeaponMasteries/raw/refs/heads/master/MeaningfulWeaponMasteries.zip
+	wget -P downloads/ https://github.com/ehaugw/SPT-AmmoSorter/raw/refs/heads/master/AmmoSorter.zip
 	wget -P downloads/ https://github.com/ehaugw/SPT-BetterZeroing/raw/refs/heads/master/BetterZeroing.zip
 	wget -P downloads/ https://github.com/ehaugw/SPT-AleLite/raw/refs/heads/master/AleLite.zip
 	# wget -P downloads/ https://github.com/ehaugw/SPT-ThatsLitSyncMirror/raw/refs/heads/master/ThatsLitSync_1.3100.3.zip
