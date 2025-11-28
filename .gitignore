@@ -1,3 +1,4 @@
+venv
 Makefile.config
 server_files/BepInEx
 server_files/LICENSE-Server.txt
