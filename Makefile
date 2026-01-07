@@ -29,7 +29,7 @@ config_server:
 	sed -i "s/maxSellChancePercent\"\: [0-9]\+/maxSellChancePercent\"\: 0/"												${gamepath}/SPT_Data/Server/configs/ragfair.json
 	sed -i "s/minUserLevel\"\: [0-9]\+/minUserLevel\"\: 99/"															${gamepath}/SPT_Data/Server/database/globals.json
 	sed -i "s/enableSeasonalEventDetection\"\: true\+/enableSeasonalEventDetection\"\: false/"							${gamepath}/SPT_Data/Server/configs/seasonalevents.json
-	perl -0777 -i -pe 's/("WeaponTreatment":\s*\{\s*"BuffMaxCount":\s*[0-9]+,\s*"BuffSettings":\s*\{\s*"CommonBuffChanceLevelBonus":\s*)[0-9]+\.[0-9]+/$$1 0.01814/s' ${gamepath}/SPT_Data/Server/database/globals.json
+	perl -0777 -i -pe 's/("WeaponTreatment":\s*\{\s*"BuffMaxCount":\s*[0-9]+,\s*"BuffSettings":\s*\{\s*"CommonBuffChanceLevelBonus":\s*)[0-9]+\.[0-9]+/$$1 0.54470588/s' ${gamepath}/SPT_Data/Server/database/globals.json
 
 
 config_fika_client:
