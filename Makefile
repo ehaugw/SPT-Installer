@@ -23,7 +23,7 @@ config_server:
 	sed -i "s/sentItemsLoseFIR\"\: true/sentItemsLoseFIR\"\: false/"													${gamepath}/${tspath}/fika-server/assets/configs/fika.jsonc 
 	sed -i "s/showNonStandardProfile\"\: false/showNonStandardProfile\"\: true/" 										${gamepath}/${tspath}/fika-server/assets/configs/fika.jsonc
 	sed -i "s/ip\"\: \"[0-9]\+.[0-9]\+.[0-9]\+.[0-9]\+/ip\"\: \"0.0.0.0/" 												${gamepath}/SPT_Data/Server/configs/http.json
-	sed -i "s/backendIp\"\: \"[0-9]\+.[0-9]\+.[0-9]\+.[0-9]\+/backendIp\"\: \"${hostwanip}/" 							${gamepath}/SPT_Data/Server/configs/http.json
+	sed -i "s/backendIp\"\: \"[0-9]\+.[0-9]\+.[0-9]\+.[0-9]\+/backendIp\"\: \"${hostwanip}/"							${gamepath}/${tspath}/fika-server/assets/configs/fika.jsonc
 	sed -i "s/54cb50c76803fa8b248b4571\"\: [0-9]\+/54cb50c76803fa8b248b4571\"\: 0/"										${gamepath}/SPT_Data/Server/configs/insurance.json
 	sed -i "s/54cb57776803fa99248b456e\"\: [0-9]\+/54cb57776803fa99248b456e\"\: 0/"										${gamepath}/SPT_Data/Server/configs/insurance.json
 	sed -i "s/maxSellChancePercent\"\: [0-9]\+/maxSellChancePercent\"\: 0/"												${gamepath}/SPT_Data/Server/configs/ragfair.json
