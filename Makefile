@@ -30,6 +30,7 @@ config_server:
 	sed -i "s/minUserLevel\"\: [0-9]\+/minUserLevel\"\: 99/"															${gamepath}/SPT_Data/Server/database/globals.json
 	sed -i "s/enableSeasonalEventDetection\"\: true\+/enableSeasonalEventDetection\"\: false/"							${gamepath}/SPT_Data/Server/configs/seasonalevents.json
 	perl -0777 -i -pe 's/("WeaponTreatment":\s*\{\s*"BuffMaxCount":\s*[0-9]+,\s*"BuffSettings":\s*\{\s*"CommonBuffChanceLevelBonus":\s*)[0-9]+\.[0-9]+/$$1 0.54470588/s' ${gamepath}/SPT_Data/Server/database/globals.json
+	perl -0777 -i -pe 's/("airdrop_chaser":\s*\{\s*"desirability":)\s*[0-9]+\s*(,\s*"max_bots_per_quest":)\s*[0-9]+\s*(,\s*"max_distance":)\s*[0-9]+/$$1 70$$2 5$$3 700/s' ${gamepath}/${tspath}/DanW-SPTQuestingBots/config/config.json
 
 
 config_fika_client:
