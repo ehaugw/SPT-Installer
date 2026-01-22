@@ -31,7 +31,7 @@ config_server:
 	sed -i "s/enableSeasonalEventDetection\"\: true\+/enableSeasonalEventDetection\"\: false/"							${gamepath}/SPT_Data/Server/configs/seasonalevents.json
 	perl -0777 -i -pe 's/("WeaponTreatment":\s*\{\s*"BuffMaxCount":\s*[0-9]+,\s*"BuffSettings":\s*\{\s*"CommonBuffChanceLevelBonus":\s*)[0-9]+\.[0-9]+/$$1 0.54470588/s' ${gamepath}/SPT_Data/Server/database/globals.json
 	perl -0777 -i -pe 's/("airdrop_chaser":\s*\{\s*"desirability":)\s*[0-9]+\s*(,\s*"max_bots_per_quest":)\s*[0-9]+\s*(,\s*"max_distance":)\s*[0-9]+/$$1 70$$2 5$$3 700/s' ${gamepath}/${tspath}/DanW-SPTQuestingBots/config/config.json
-
+	perl -0777 -i -pe 's/("66c1beaffa6e5a0c120f0d4f":\s*\[\s*\[\s*\{\s*"_tpl":\s*"5d235b4d86f7742e017bc88a",\s*"count":)\s*[0-9]+\.[0-9]+(\s*\}\s*\]\s*\])/$$1 66.7$$2/s' ${gamepath}/SPT_Data/Server/database/traders/6617beeaa9cfa777ca915b7c/assort.json
 
 config_fika_client:
 	sed -i "s/Url\"\: \"https\:\/\/[0-9]\+.[0-9]\+.[0-9]\+.[0-9]\+:[0-9]\+/Url\"\: \"https\:\/\/${hostwanip}\:6969/"	${gamepath}/user/launcher/config.json
