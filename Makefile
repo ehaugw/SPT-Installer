@@ -14,11 +14,16 @@ install:
 forceinstall: clean download extract clean
 
 config:
-	if [ -f ${gamepath}/user/launcher/config.json ]; then make config_client; else make config_server; fi
+	if [ -f ${gamepath}/user/launcher/config.json ]; then make config-client; else make config-server; fi
 
-config_client: config_fika_client config_thatslit
+config-client: config-fika-client config-thatslit
 
-config_server:
+import-sain-preset-from-game:
+	rm -rf sain
+	mkdir sain
+	cp -r ${gamepath}/${pluginpath}/SAIN/Presets/deathwish_warberg sain
+
+config-server:
 	sed -i "s/sharedQuestProgression\"\: false/sharedQuestProgression\"\: true/"										${gamepath}/${tspath}/fika-server/assets/configs/fika.jsonc 
 	sed -i "s/sentItemsLoseFIR\"\: true/sentItemsLoseFIR\"\: false/"													${gamepath}/${tspath}/fika-server/assets/configs/fika.jsonc 
 	sed -i "s/showNonStandardProfile\"\: false/showNonStandardProfile\"\: true/" 										${gamepath}/${tspath}/fika-server/assets/configs/fika.jsonc
@@ -33,7 +38,7 @@ config_server:
 	perl -0777 -i -pe 's/("airdrop_chaser":\s*\{\s*"desirability":)\s*[0-9]+\s*(,\s*"max_bots_per_quest":)\s*[0-9]+\s*(,\s*"max_distance":)\s*[0-9]+/$$1 70$$2 5$$3 700/s' ${gamepath}/${tspath}/DanW-SPTQuestingBots/config/config.json
 	perl -0777 -i -pe 's/("66c1beaffa6e5a0c120f0d4f":\s*\[\s*\[\s*\{\s*"_tpl":\s*"5d235b4d86f7742e017bc88a",\s*"count":)\s*[0-9]+\.[0-9]+(\s*\}\s*\]\s*\])/$$1 100.0$$2/s' ${gamepath}/SPT_Data/Server/database/traders/6617beeaa9cfa777ca915b7c/assort.json
 
-config_fika_client:
+config-fika-client:
 	sed -i "s/Url\"\: \"https\:\/\/[0-9]\+.[0-9]\+.[0-9]\+.[0-9]\+:[0-9]\+/Url\"\: \"https\:\/\/${hostwanip}\:6969/"	${gamepath}/user/launcher/config.json
 	sed -i "s/IsDevMode\"\: false/IsDevMode\"\: true/"																	${gamepath}/user/launcher/config.json
 	sed -i "s/Show Player Name Plates = true/Show Player Name Plates = false/"											${gamepath}/BepInEx/config/com.fika.core.cfg
@@ -49,7 +54,7 @@ config_fika_client:
 	sed -i "s/Open Editor Shortcut = [a-zA-Z0-9]\+/Open Editor Shortcut = /"											${gamepath}/BepInEx/config/me.sol.sain.cfg
 	cp -r sain/deathwish_warberg																						${gamepath}/BepInEx/plugins/SAIN/Presets/deathwish_warberg
 
-config_thatslit:
+config-thatslit:
 	echo "skipping that's lit until update"
 	# sed -i "s/Lighting Info = true/Lighting Info = false/"      														${gamepath}/BepInEx/config/bastudio.thatslit.cfg
 	# sed -i "s/Weather Info = true/Weather Info = false/"        														${gamepath}/BepInEx/config/bastudio.thatslit.cfg
@@ -103,7 +108,7 @@ download:
 	wget -P downloads/ https://github.com/SleepingPills/HollywoodFX/releases/download/v1.6.7/HollywoodFX_1.6.7.zip
 	wget -P downloads/ https://github.com/tyfon7/hip/releases/download/v1.1.0/Tyfon-HideoutInProgress-1.1.0.zip
 
-download_4:
+download-4:
 	mkdir -p downloads
 	wget -P downloads/ https://github.com/dwesterwick/SPTQuestingBots/releases/download/0.10.0/DanW-SPTQuestingBots.zip
 	wget -P downloads/ https://github.com/tyfon7/UIFixes/releases/download/v4.2.1/Tyfon-UIFixes-4.2.1.zip
