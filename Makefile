@@ -107,6 +107,8 @@ download:
 	# wget -P downloads/ https://github.com/ehaugw/SPT-NonUglyCPC/raw/refs/heads/master/non-ugly-cpc.zip
 	wget -P downloads/ https://github.com/SleepingPills/HollywoodFX/releases/download/v1.6.7/HollywoodFX_1.6.7.zip
 	wget -P downloads/ https://github.com/tyfon7/hip/releases/download/v1.1.0/Tyfon-HideoutInProgress-1.1.0.zip
+	wget -O downloads/fontaines-fov-fix.zip https://forge.sp-tarkov.com/mod/download/701/fontaines-fov-fix/3.1.4
+
 
 download-4:
 	mkdir -p downloads
